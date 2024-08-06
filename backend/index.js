@@ -7,7 +7,15 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-app.use(cors()) 
+app.use(cors());
+app.use(
+  cors({
+    origin: ["https://note-app-five-rose.vercel.app"],
+    methods: ["GET","POST","PUT","DELETE"],
+    optionSuccessStatus:200
+    credentials: true,
+  })
+);
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -20,14 +28,6 @@ mongoose
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: ["https://note-app-five-rose.vercel.app"],
-    methods: ["GET","POST","PUT","DELETE"],
-    optionSuccessStatus:200
-    credentials: true,
-  })
-);
 
 //import routes
 import noteRouter from "./routes/note.route.js";
