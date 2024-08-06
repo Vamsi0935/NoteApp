@@ -1,4 +1,4 @@
-import express from "express";
+eimport express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -9,7 +9,8 @@ dotenv.config();
 app.use(cors({
   origin: 'https://your-frontend-url.com', // Replace with your frontend URL
   methods: 'GET,POST,PUT,DELETE,OPTIONS',
-  allowedHeaders: 'Content-Type,Authorization'
+  allowedHeaders: 'Content-Type,Authorization',
+  credentials: true,
 }));
 const app = express();
 
