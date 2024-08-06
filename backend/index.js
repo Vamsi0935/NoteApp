@@ -23,6 +23,7 @@ app.use(
   cors({
     origin: ["https://note-app-frontend1.vercel.app"],
     methods: ['GET,POST,PUT,DELETE],
+    allowedHeaders: 'Content-Type,Authorization',
     credentials: true,
   })
 );
