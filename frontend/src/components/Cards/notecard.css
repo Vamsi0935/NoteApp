@@ -1,0 +1,19 @@
+.editIcon-btn,
+.deleteIcon-btn {
+    color: grey;
+    font-size: 18px;
+}
+
+.editIcon-btn:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.deleteIcon-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.noteCard:hover {
+    box-shadow: 0 4px 8px 0 #eee, 0 6px 20px 0 #ddd;
+}
