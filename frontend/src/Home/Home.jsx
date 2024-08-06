@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     getAllNotes();
   }, []);
-axios.defaults.withCredentials = true;
+
   // Fetch all notes
   const getAllNotes = async () => {
     try {
