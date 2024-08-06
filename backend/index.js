@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: ["https://note-app-five-rose.vercel.app"],
-    methods: ['GET,POST,PUT,DELETE],
-    allowedHeaders: 'Content-Type,Authorization',
+    methods: ["GET","POST","PUT","DELETE"],
+    optionSuccessStatus:200
     credentials: true,
   })
 );
