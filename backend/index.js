@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://note-app-frontend1.vercel.app"],
+    origin: ["https://note-app-five-rose.vercel.app"],
     methods: ['GET,POST,PUT,DELETE],
     allowedHeaders: 'Content-Type,Authorization',
     credentials: true,
