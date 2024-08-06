@@ -109,7 +109,7 @@ const Home = () => {
       };
 
       const res = await axios.get(
-        "http://localhost:5000/api/note/search",
+        "https://note-app-api-three.vercel.app/api/note/search",
         config
       );
 
