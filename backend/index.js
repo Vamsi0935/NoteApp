@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://note-app-api-three.vercel.app"],
+    origin: ["https://note-app-frontend-puce.vercel.app/"],
     credentials: true,
   })
 );
