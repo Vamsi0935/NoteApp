@@ -32,6 +32,10 @@ app.use(
 import noteRouter from "./routes/note.route.js";
 app.use("/api/note", noteRouter);
 
+app.get('/api/note/all', (req, res) => {
+  res.json({ message: 'Notes fetched successfully' }); // Example response
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
