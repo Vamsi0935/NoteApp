@@ -22,6 +22,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: ["https://note-app-frontend1.vercel.app"],
+    methods: ['GET,POST,PUT,DELETE],
     credentials: true,
   })
 );
