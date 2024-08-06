@@ -7,7 +7,7 @@ import cors from "cors";
 dotenv.config();
 
 app.use(cors({
-  origin: 'https://your-frontend-url.com', // Replace with your frontend URL
+  origin: 'https://note-app-frontend-alpha.vercel.app', // Replace with your frontend URL
   methods: 'GET,POST,PUT,DELETE,OPTIONS',
   allowedHeaders: 'Content-Type,Authorization',
   credentials: true,
