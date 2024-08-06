@@ -8,8 +8,7 @@ dotenv.config();
 
 app.use(cors({
   origin: 'https://note-app-frontend-alpha.vercel.app', // Replace with your frontend URL
-  methods: 'GET,POST,PUT,DELETE,OPTIONS',
-  allowedHeaders: 'Content-Type,Authorization',
+  methods: ['GET','POST','PUT','DELETE']
   credentials: true,
 }));
 const app = express();
@@ -29,10 +28,6 @@ app.use(cookieParser());
 //import routes
 import noteRouter from "./routes/note.route.js";
 app.use("/api/note", noteRouter);
-
-app.get('/api/note/all', (req, res) => {
-  res.json({ message: 'Notes fetched successfully' }); // Example response
-});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
