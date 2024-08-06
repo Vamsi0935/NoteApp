@@ -6,15 +6,12 @@ import cors from "cors";
 
 dotenv.config();
 
+app.use(cors({
+  origin: 'https://your-frontend-url.com', // Replace with your frontend URL
+  methods: 'GET,POST,PUT,DELETE,OPTIONS',
+  allowedHeaders: 'Content-Type,Authorization'
+}));
 const app = express();
-app.use(cors());
-app.use(
-  cors({
-    origin: ["https://note-app-five-rose.vercel.app"],
-    methods: ["GET","POST","PUT","DELETE"],
-    credentials: true,
-  })
-);
 
 mongoose
   .connect(process.env.MONGO_URI)
