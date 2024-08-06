@@ -5,12 +5,6 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 dotenv.config();
-
-app.use(cors({
-  origin: 'https://note-app-frontend-alpha.vercel.app',
-  methods: ['GET','POST','PUT','DELETE']
-  credentials: true,
-}));
 const app = express();
 
 mongoose
@@ -24,6 +18,11 @@ mongoose
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({
+  origin: 'https://note-app-frontend-alpha.vercel.app',
+  methods: ['GET','POST','PUT','DELETE']
+  credentials: true,
+}));
 
 //import routes
 import noteRouter from "./routes/note.route.js";
