@@ -27,7 +27,7 @@ const Home = () => {
   // Fetch all notes
   const getAllNotes = async () => {
     try {
-      const res = await axios.get(`https://note-app-api-three.vercel.app/api/note/all`, {
+      const res = await axios.get(`http://localhost:5000/api/note/all`, {
         withCredentials: true,
       });
 
@@ -62,7 +62,7 @@ const Home = () => {
     if (result.isConfirmed) {
       try {
         const res = await axios.delete(
-          `https://note-app-api-three.vercel.app/api/note/delete/${noteId}`,
+          `http://localhost:5000/api/note/delete/${noteId}`,
           {
             withCredentials: true,
           }
@@ -109,7 +109,7 @@ const Home = () => {
       };
 
       const res = await axios.get(
-        "https://note-app-api-three.vercel.app/api/note/search",
+        "http://localhost:5000/api/note/search",
         config
       );
 
