@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://note-app-frontend-alpha.vercel.app"],
+    origin: ["http://localhost:3000"],
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true,
   })
