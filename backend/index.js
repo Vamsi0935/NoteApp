@@ -41,6 +41,14 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(5000, (req, res) => {
-  console.log("Server is running......");
-});
+export default (req, res) => {
+  return new Promise((resolve, reject) => {
+    app(req, res, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
+  });
+};
