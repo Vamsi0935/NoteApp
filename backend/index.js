@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   origin: 'http://note-app-frontend-alpha.vercel.app',
-  methods: ['GET','POST','PUT','DELETE']
-  credentials: true,
+  methods: ['GET','POST','PUT','DELETE'],
+  credentials: true
 }));
 
 //import routes
