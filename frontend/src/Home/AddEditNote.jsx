@@ -16,7 +16,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
     const noteId = noteData._id;
     try {
       const res = await axios.put(
-        `https://localhost:3000/api/note/edit/${noteId}`,
+        `http://localhost:5000/api/note/edit/${noteId}`,
         { title, content },
         { withCredentials: true }
       );
@@ -55,7 +55,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
   const addNewNote = async () => {
     try {
       const res = await axios.post(
-        "https://localhost:3000/api/note/add",
+        "http://localhost:5000/api/note/add",
         {
           title,
           content,
