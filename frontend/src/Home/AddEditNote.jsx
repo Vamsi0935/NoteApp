@@ -53,7 +53,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
 
   //add new note
   const addNewNote = async () => {
-    try {
+    try {  
       const res = await axios.post(
         "http://localhost:5000/api/note/add",
         {
@@ -117,25 +117,25 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
         <h4>Add Note</h4>
         <IoCloseSharp onClick={onClose} className="deleteIcon-btn" />
       </div>
-      <div class="mb-3">
-        <label htmlFor="modalTitle" class="form-label">
+      <div className="mb-3">
+        <label htmlFor="modalTitle" className="form-label">
           Title:
         </label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="modalTitle"
           placeholder="Title of the note........"
           value={title}
           onChange={({ target }) => setTitle(target.value)}
         />
       </div>
-      <div class="mb-3">
-        <label htmlFor="modalContent" class="form-label">
+      <div className="mb-3">
+        <label htmlFor="modalContent" className="form-label">
           Content
         </label>
         <textarea
-          class="form-control"
+          className="form-control"
           id="modalContent"
           rows="10"
           value={content}
@@ -144,7 +144,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
       </div>
       <div className="d-grid gap-2 d-md-flex justify-content-md-end">
         {/* <button
-          class="btn btn-outline-secondary rounded-pill me-md-2"
+          className="btn btn-outline-secondary rounded-pill me-md-2"
           type="button"
         >
           Cancel
