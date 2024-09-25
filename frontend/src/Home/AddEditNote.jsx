@@ -55,7 +55,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
   const addNewNote = async () => {
     try {  
       const res = await axios.post(
-        "http://localhost:5000/api/note/add",
+        "https://note-app-api-three.vercel.app/api/note/add",
         {
           title,
           content,
