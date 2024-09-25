@@ -16,7 +16,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
     const noteId = noteData._id;
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/note/edit/${noteId}`,
+        `https://note-app-api-three.vercel.app/api/note/edit/${noteId}`,
         { title, content },
         { withCredentials: true }
       );
