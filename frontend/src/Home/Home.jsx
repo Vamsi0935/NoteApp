@@ -62,7 +62,7 @@ const Home = () => {
     if (result.isConfirmed) {
       try {
         const res = await axios.delete(
-          `http://localhost:5000/api/note/delete/${noteId}`,
+          `https://note-app-api-three.vercel.app/api/note/delete/${noteId}`,
           {
             withCredentials: true,
           }
