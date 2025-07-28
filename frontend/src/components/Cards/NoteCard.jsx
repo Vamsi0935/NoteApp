@@ -13,7 +13,7 @@ const NoteCard = ({ title, content, date, onEdit, onDelete }) => {
           <RiDeleteBinFill onClick={onDelete} className="deleteIcon-btn" />
         </div>
         <div className="body-card">
-          <h4 className="display-6">{title}</h4> 
+          <h4 className="display-6"><strong>{title}</strong></h4> 
           <span className="fw-light clamp-text">{content}</span>
         </div>
       </div>
